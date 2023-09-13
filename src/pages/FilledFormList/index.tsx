@@ -1,4 +1,7 @@
-import { Box, Button, List, ListItem, ListItemButton, ListItemText, Paper, Typography } from "@mui/material";
+import {
+  Avatar, Box, Button, Divider, List,
+  ListItem, ListItemButton, ListItemText, Typography
+} from "@mui/material";
 import { Link, useNavigate } from 'react-router-dom';
 import { useUserData } from "../../utils/contexts/UserDataContext";
 
@@ -11,7 +14,7 @@ export function FilledFormList() {
     <div>
       <div>
         <Button
-          onClick={() => navigate(-1)}>Preencher novo formulário</Button>
+          onClick={() => navigate("/")}>Preencher novo formulário</Button>
       </div>
       <Box
         component="form"
@@ -33,25 +36,34 @@ export function FilledFormList() {
       }}>
 
         <div>
-          <Paper elevation={3}>
-            <List
-              component="nav" aria-label="main mailbox folders"
-              sx={{ width: '100%', bgcolor: 'background.paper' }}
-            >
-              {formList.map((listItem, index) =>
+          {/* <Paper elevation={3} */}
+          {/* sx={{ minHeight: '20vw' }}> */}
+          <List
+            component="nav" aria-label="main mailbox folders"
+            sx={{ width: '100%', bgcolor: 'background.paper', minWidth: '40vw' }}
+          >
+            {formList.map((listItem) =>
+              <>
                 <ListItem disablePadding>
                   <ListItemButton
+                    sx={{
+                      flexDirection: 'row',
+                      display: 'flex',
+                      gap: 2,
+                    }}
                     component={Link}
                     to={`../${listItem.name}/details`}>
-                    <ListItemText primary={index + 1} />
+                    <Avatar sx={{ bgcolor: 'primary.main' }}>{listItem.name[0].toUpperCase()}</Avatar>
                     <ListItemText primary={listItem.name} />
                   </ListItemButton>
                 </ListItem>
-              )}
-            </List>
-          </Paper>
+                <Divider variant="inset" component="li" />
+              </>
+            )}
+          </List>
+          {/* </Paper> */}
         </div>
-      </Box>
-    </div>
+      </Box >
+    </div >
   );
 }
