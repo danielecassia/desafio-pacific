@@ -35,6 +35,9 @@ export function DetailsFormData() {
             label="Nome"
             type="search"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.name}
           />
           <TextField
@@ -42,6 +45,9 @@ export function DetailsFormData() {
             label=" Email"
             type="search"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.email}
           />
         </div>
@@ -51,6 +57,9 @@ export function DetailsFormData() {
             label="Telefone"
             type="number"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.phone}
           />
           <TextField
@@ -58,6 +67,9 @@ export function DetailsFormData() {
             label=" Data de Nascimento"
             type="date"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.birth}
           />
         </div>
@@ -67,6 +79,9 @@ export function DetailsFormData() {
             label="Rua"
             type="search"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.street}
           />
           <TextField
@@ -74,6 +89,9 @@ export function DetailsFormData() {
             label=" Número"
             type="number"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.number}
           />
         </div>
@@ -83,6 +101,9 @@ export function DetailsFormData() {
             label="CEP"
             type="number"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.cep}
           />
           <TextField
@@ -90,6 +111,9 @@ export function DetailsFormData() {
             label="Estado"
             type="search"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.state}
           />
         </div>
@@ -99,6 +123,9 @@ export function DetailsFormData() {
             label="Raça/Cor"
             type="search"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.race}
           />
           <TextField
@@ -106,6 +133,9 @@ export function DetailsFormData() {
             label="Gênero"
             type="search"
             variant="standard"
+            InputProps={{
+              readOnly: true,
+            }}
             value={formUser?.gender}
           />
         </div>
