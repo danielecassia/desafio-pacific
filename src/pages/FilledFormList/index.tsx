@@ -8,8 +8,6 @@ import { useUserData } from "../../utils/contexts/UserDataContext";
 export function FilledFormList() {
   const { formList } = useUserData();
   const navigate = useNavigate();
-
-  console.log(formList);
   return (
     <div>
       <div>

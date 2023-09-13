@@ -2,7 +2,6 @@
 import { FormControl } from '@mui/base/FormControl';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Box, Button, Paper, TextField, Typography } from '@mui/material';
-import { useEffect } from 'react';
 import { useUserData } from '../../utils/contexts/UserDataContext';
 
 export function DetailsFormData() {
@@ -10,10 +9,6 @@ export function DetailsFormData() {
   const navigate = useNavigate();
   const { userName } = useParams();
   const formUser = formList.find((item) => item.name == userName)
-  useEffect(() => {
-    console.log(formUser);
-
-  }, [])
 
   return (
     <div>

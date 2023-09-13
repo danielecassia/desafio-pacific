@@ -11,7 +11,6 @@ export function UsersForm() {
   const navigate = useNavigate();
 
   function updateData(newFormData: Partial<UserData>) {
-    // console.log(newFormData)
     setFormData({ ...formData, ...newFormData });
   }
   function handleSubmit() {

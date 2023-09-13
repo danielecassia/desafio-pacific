@@ -22,24 +22,15 @@ const UserDataProvider: React.FC<Props> = ({ children }) => {
     setFormList([...formList, newUserData])
   }
 
-  // function deleteDataToFormList(){
-
-  // }
-
   // carrega a lista de formulários preenchidos
   useEffect(() => {
     const oldFilledForms = localStorage.getItem('filledForms')
     if (!oldFilledForms) {
-      console.log("nao")
       return
     }
     const filledForms = JSON.parse(oldFilledForms);
     if (filledForms) {
-      console.log("deu")
       setFormList(filledForms);
-    }
-    else {
-      console.log("deu nao")
     }
   }, [])
 
@@ -48,7 +39,6 @@ const UserDataProvider: React.FC<Props> = ({ children }) => {
     if (formList.length == 0)
       return
     localStorage.setItem('filledForms', JSON.stringify(formList))
-    console.log("salvou")
   }, [formList])
 
   return (
