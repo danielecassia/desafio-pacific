@@ -20,9 +20,9 @@ export default function App() {
 function Root() {
   return (
     <Routes>
-      <Route index element={<FilledFormList />} />
-      <Route path="fillForm" element={<UsersForm />} />
-      <Route path=":id/details" element={<DetailsFormData />} />
+      <Route index element={<UsersForm />} />
+      <Route path="listFilledForms" element={< FilledFormList />} />
+      <Route path=":userName/details" element={<DetailsFormData />} />
     </Routes>
   )
 }
