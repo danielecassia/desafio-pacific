@@ -19,6 +19,11 @@ export function DetailsFormData() {
       component="form"
       sx={{
         '& .MuiTextField-root': { m: 1, width: '25ch' },
+        display: 'flex',
+        justifyContent: 'center',
+        p: 1,
+        m: 15,
+        borderRadius: 1,
       }}
       noValidate
       autoComplete="off"
@@ -44,14 +49,14 @@ export function DetailsFormData() {
           <TextField
             id="standard-search"
             label="Telefone"
-            type="search"
+            type="number"
             variant="standard"
             value={formUser?.phone}
           />
           <TextField
             id="standard-search"
             label=" Data de Nascimento"
-            type="search"
+            type="date"
             variant="standard"
             value={formUser?.birth}
           />
@@ -67,7 +72,7 @@ export function DetailsFormData() {
           <TextField
             id="standard-search"
             label=" Número"
-            type="search"
+            type="number"
             variant="standard"
             value={formUser?.number}
           />
@@ -76,7 +81,7 @@ export function DetailsFormData() {
           <TextField
             id="standard-search"
             label="CEP"
-            type="search"
+            type="number"
             variant="standard"
             value={formUser?.cep}
           />
@@ -106,5 +111,6 @@ export function DetailsFormData() {
         </div>
       </FormControl>
     </Box>
+
   )
 }
