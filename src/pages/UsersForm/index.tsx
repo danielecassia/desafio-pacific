@@ -1,8 +1,8 @@
 import { FormControl } from '@mui/base/FormControl';
 import { Box, Button, TextField } from '@mui/material';
-import { useUserData } from '../../contexts/UserDataContext';
 import React from 'react';
-import { UserData, emptyUserData } from '../../types/UserData';
+import { UserData, emptyUserData } from '../../utils/types/UserData';
+import { useUserData } from '../../utils/contexts/UserDataContext';
 
 export function UsersForm() {
   const { formList, addDataToFormList } = useUserData();

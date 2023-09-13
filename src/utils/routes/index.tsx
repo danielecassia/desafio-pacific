@@ -5,9 +5,9 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 
-import { UsersForm } from "../pages/UsersForm";
-import { FilledFormList } from "../pages/FilledFormList";
-import { DetailsFormData } from "../pages/DetailsFormData";
+import { UsersForm } from "../../pages/UsersForm";
+import { FilledFormList } from "../../pages/FilledFormList";
+import { DetailsFormData } from "../../pages/DetailsFormData";
 
 const router = createBrowserRouter([
   { path: "*", Component: Root },
