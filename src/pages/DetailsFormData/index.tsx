@@ -33,7 +33,7 @@ export function DetailsFormData() {
         }}
         noValidate
         autoComplete="off"
-      ><Typography>Formulário Preenchido</Typography></Box>
+      ><Typography variant="h5" color={'primary.main'}>Formulário Preenchido</Typography></Box>
       <Box
         component="form"
         sx={{

@@ -21,8 +21,6 @@ export function UsersForm() {
 
   return (
     <div>
-
-
       <Box
         sx={{
           '& .MuiTextField-root': { m: 1, width: '25ch' },
@@ -32,7 +30,7 @@ export function UsersForm() {
           m: 5,
           borderRadius: 1,
         }}>
-        <Typography>Novo Usuário</Typography>
+        <Typography variant="h5" color={'primary.main'}>Novo Usuário</Typography>
       </Box>
       <Box
         component="form"
@@ -145,6 +143,9 @@ export function UsersForm() {
               </div>
               <div>
                 <Button
+                  size="small"
+                  variant="contained"
+                  color="success"
                   onClick={handleSubmit}
                   disabled={formData.name == " " || formData.name == ""}>Salvar Dados</Button>
               </div>

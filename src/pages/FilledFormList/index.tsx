@@ -14,6 +14,7 @@ export function FilledFormList() {
     <div>
       <div>
         <Button
+          size="small"
           onClick={() => navigate("/")}>Preencher novo formulário</Button>
       </div>
       <Box
@@ -26,7 +27,7 @@ export function FilledFormList() {
         }}
         noValidate
         autoComplete="off"
-      ><Typography>Formulários Preenchidos</Typography></Box>
+      ><Typography variant="h5" color={'primary.main'}>Formulários Preenchidos</Typography></Box>
       <Box sx={{
         display: 'flex',
         justifyContent: 'center',
